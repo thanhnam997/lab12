@@ -13,7 +13,8 @@ const app=express()
 //enable parsing of POST request form body
 app.use(bodyParser.urlencoded({ extended: false }))
 
-
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 //configured app to use the Handlebars template engine and
 // work with template files in view directory
