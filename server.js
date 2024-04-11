@@ -17,10 +17,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //configured app to use the Handlebars template engine and
 // work with template files in view directory
-app.set('view',path.join(__dirname,'views'))
+app.set('views', path.join(__dirname, 'views'));
+
 // "view" are web pages,hbs is handlebars
 app.set('view engine','hbs')
 
 app.use('/',indexRouter)
 
-let server =app.listen(3000)
+let server =app.listen(3001)
