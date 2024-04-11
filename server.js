@@ -1,12 +1,12 @@
 
 const path=require('path')
 const express = require('express');
-const bodyParser=require('bode-parser')
+const bodyParser=require('body-parser')
 //routing is figuring out what page the user wants 
 //typically based on a URL (brownser address bar)
 //we'll delegate that to routes/index.js
 
-const indexRouter=require('./routes/index.js')
+const indexRouter=require('./index.js')
 
 const app=express()
 
