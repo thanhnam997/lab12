@@ -10,14 +10,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #8b1e1e; /* Light background */
 }
 
 /* Container styles */
 .container {
     max-width: 400px;
     padding: 20px;
-    background-color: #fff; /* White background */
+    background-color: #ffffff; /* background */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
