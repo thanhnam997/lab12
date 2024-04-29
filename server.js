@@ -16,12 +16,41 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('home');
 });
+
+
+
+
+
+// Define a route handler for the '/calculate' endpoint
 // Route for calculating BMI
 app.get('/calculate', (req, res) => {
+   // Destructure the 'height' and 'weight' values from the query parameters
     const { height, weight } = req.query;
+    // Parse the height and weight values as floating-point numbers
+    
+    const parsedHeight = parseFloat(height);
+  const parsedWeight = parseFloat(weight);
+
+
+
+    // Calculate the BMI using the provided height and weight
     const bmi = calculateBMI(parseFloat(height), parseFloat(weight));
+    
+     // Render the 'result' Handlebars template and pass the calculated BMI value as data
     res.render('result', { bmi });
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 // BMI calculation function
 function calculateBMI(height, weight) {
